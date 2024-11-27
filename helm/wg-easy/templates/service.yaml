@@ -11,7 +11,9 @@ metadata:
   {{- end }}
 spec:
   type: {{ .Values.service.ui.type }}
+  {{- if contains "LoadBalancer" .Values.service.ui.type }}
   externalTrafficPolicy: {{ .Values.service.ui.externalTrafficPolicy }}
+  {{- end }}
   ports:
     - port: {{ .Values.service.ui.port }}
       targetPort: http-ui

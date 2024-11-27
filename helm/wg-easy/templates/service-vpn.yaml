@@ -11,7 +11,9 @@ metadata:
   {{- end }}
 spec:
   type: {{ .Values.service.vpn.type }}
+  {{- if contains "LoadBalancer" .Values.service.vpn.type }}
   externalTrafficPolicy: {{ .Values.service.vpn.externalTrafficPolicy }}
+  {{- end }}
   ports:
     - port: {{ .Values.service.vpn.port }}
       targetPort: udp-vpn
