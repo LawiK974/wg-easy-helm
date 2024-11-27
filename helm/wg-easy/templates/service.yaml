@@ -17,9 +17,15 @@ spec:
     - port: {{ .Values.service.vpn.port }}
       targetPort: udp-vpn
       protocol: UDP
+      {{- with .Values.service.vpn.nodePort }}
+      nodePort: {{ . }}
+      {{- end }}
       name: udp-vpn
     - port: {{ .Values.service.ui.port }}
       targetPort: http-ui
+      {{- with .Values.service.ui.nodePort }}
+      nodePort: {{ . }}
+      {{- end }}
       protocol: TCP
       name: http-ui
   selector:
