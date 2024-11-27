@@ -12,12 +12,13 @@ metadata:
   {{- end }}
 spec:
   type: {{ .Values.service.type }}
+  externalTrafficPolicy: {{ .Values.service.externalTrafficPolicy }}
   ports:
-    - port: 51820
+    - port: {{ .Values.service.vpn.port }}
       targetPort: udp-vpn
       protocol: UDP
       name: udp-vpn
-    - port: 51821
+    - port: {{ .Values.service.ui.port }}
       targetPort: http-ui
       protocol: TCP
       name: http-ui

@@ -1,16 +1,16 @@
 apiVersion: v2
 name: wg-easy
 description: Wireguard Easy helm chart for Kubernetes
-home: https://github.com/hansehe/wg-easy-helm
-icon: https://raw.githubusercontent.com/hansehe/wg-easy-helm/master/helm/wireguard.png
+home: https://github.com/LawiK974/wg-easy-helm
+icon: https://raw.githubusercontent.com/LawiK974/wg-easy-helm/master/helm/wireguard.png
 keywords:
 - wireguard
 - wg-easy
 maintainers:
-- email: hans.erik.heggem@gmail.com
-  name: hansehe
+- email: loic97429@gmail.com
+  name: LawiK974
 sources:
-- https://github.com/hansehe/wg-easy-helm
+- https://github.com/LawiK974/wg-easy-helm
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -28,4 +28,4 @@ version: 0.1.0
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application.
-appVersion: "9"
+appVersion: "v14.0.0"
