@@ -3,9 +3,9 @@ entries:
   wg-easy:
   - apiVersion: v2
     appVersion: "14"
-    created: "2024-11-27T15:12:39.67319472+01:00"
+    created: "2024-11-27T15:55:45.052900424+01:00"
     description: Wireguard Easy helm chart for Kubernetes
-    digest: 5ea78ca3fc4f79a01df636a409b545659c4cdc36baa64bd0bd0f1d782292ff92
+    digest: bb805e32e19c0528a205d187e56fe34d1a47a134c01e08f5be4f9b380e3f95ac
     home: https://github.com/LawiK974/wg-easy-helm
     icon: https://raw.githubusercontent.com/LawiK974/wg-easy-helm/master/helm/wireguard.png
     keywords:
@@ -19,6 +19,6 @@ entries:
     - https://github.com/LawiK974/wg-easy-helm
     type: application
     urls:
-    - wg-easy-0.2.0.tgz
-    version: 0.2.0
-generated: "2024-11-27T15:12:39.672740542+01:00"
+    - wg-easy-0.2.1.tgz
+    version: 0.2.1
+generated: "2024-11-27T15:55:45.052058054+01:00"

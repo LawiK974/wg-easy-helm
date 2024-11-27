@@ -5,7 +5,7 @@ metadata:
   namespace: {{ .Release.Namespace }}
   labels:
     {{- include "wg-easy.labels" . | nindent 4 }}
-  {{- with .Values.service.annotations }}
+  {{- with .Values.service.vpn.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
   {{- end }}
