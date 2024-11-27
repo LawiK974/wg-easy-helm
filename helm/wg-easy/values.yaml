@@ -10,6 +10,12 @@ image:
   pullPolicy: IfNotPresent
   tag: ""
 
+# -- Use an existing secret for the admin password hash.
+admin:
+  existingSecret: ""
+  # passord hash is used when existingSecret is not set
+  passwordHash: '$2b$12$coPqCsPtcFO.Ab99xylBNOW4.Iu7OOA2/ZIboHN6/oyxca3MWo7fW' # YOUR_PASSWORD
+
 healthCheckUrl: /
 imagePullSecrets: []
 nameOverride: ""
@@ -17,7 +23,6 @@ fullnameOverride: ""
 terminationGracePeriodSeconds: 10
 environmentVariables:
   WG_HOST: localhost # WAN IP, or a Dynamic DNS hostname.
-  PASSWORD: password # Password for the UI.
   WG_DEVICE: eth0
   WG_DEFAULT_DNS: 1.1.1.1, 8.8.8.8
 

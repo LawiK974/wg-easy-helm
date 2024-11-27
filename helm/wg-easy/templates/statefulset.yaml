@@ -75,6 +75,14 @@ spec:
           - name: COLLECTOR_ZIPKIN_HOST_PORT
             value: ":9411"
           {{- end }}
+          {{- if .Values.admin.existingSecret }}
+          envFrom:
+            - secretRef:
+                name: {{ .Values.admin.existingSecret }}
+          {{- else }}
+          - name: PASSWORD_HASH
+            value: {{ .Values.admin.passwordHash | quote }}
+          {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
