@@ -48,7 +48,6 @@ securityContext:
 service:
   ui:
     type: ClusterIP
-    externalTrafficPolicy: Cluster
     port: 80
     annotations:
       prometheus.io/probe: "true"
